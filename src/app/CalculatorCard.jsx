@@ -73,7 +73,7 @@ const CalculatorCard = () => {
             return (
               <button
                 key={index}
-                className="border p-4 rounded-lg border-1"
+                className="border p-4 rounded-lg border-1 hover:bg-gray-100 transition-all"
                 onClick={handleClick}
                 data-value={value}
               >
@@ -197,7 +197,7 @@ const CalculatorCard = () => {
           </button>
         </div> */}
         <button
-          className="border border-1 w-full p-3 rounded-lg"
+          className="border border-1 w-full p-3 rounded-lg hover:bg-black hover:text-white transition-all duration-200"
           onClick={handleClear}
         >
           Clear
