@@ -17,8 +17,8 @@ const CalculatorCard = () => {
     "+",
     0,
     ".",
-    "-",
     "=",
+    "-",
   ];
 
   function handleClick(event) {
@@ -35,12 +35,25 @@ const CalculatorCard = () => {
   }
 
   function handleSubmit() {
-    if (inputValue === undefined) {
-      alert("Covered the edge cases, lol");
+    try {
+      // If submit when input is empty
+      if (inputValue === undefined || inputValue === "") {
+        throw new Error("Input is empty");
+      }
+  
+      // The first character should be a number or a decimal
+      const invalidStart = /[^0-9.]/.test(inputValue.charAt(0));
+      if (invalidStart) {
+        throw new Error("Invalid expression format");
+      }
+  
+      const result = eval(inputValue);
+      setInputValue(result);
+    } catch (error) {
+      console.error("Error evaluating expression:", error.message);
     }
-    const result = eval(inputValue);
-    setInputValue(result);
   }
+  
 
   function handleClear() {
     setInputValue("");
