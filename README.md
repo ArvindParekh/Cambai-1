@@ -1,8 +1,43 @@
-# React + Vite
+# 🧮 Awesome Calculator 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the React Awesome Calculator! A sleek and feature-rich calculator built with React.
 
-Currently, two official plugins are available:
+## 📷 Screenshots
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Calculator Screenshot](https://github.com/ArvindParekh/Cambai-1/assets/71211731/79429288-9a7b-41bc-999d-24db02d2c719)
+
+<!-- ## 🚀 Features
+
+- Perform basic arithmetic operations: addition, subtraction, multiplication, division.
+- Responsive design for a seamless experience on various devices.
+- Clear and intuitive user interface.
+- Error handling for division by zero and other mathematical errors.
+- Stylish buttons with interactive hover effects. -->
+
+## 🛠️ Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone git@github.com:ArvindParekh/Cambai-1.git
+   ```
+
+2. Change into project directory:
+
+    ```bash
+    cd Cambai-1
+    ```
+
+3. Install dependencies:
+
+    ```bash
+    pnpm install
+    ```
+
+4. Start the application:
+
+    ```bash
+    pnpm run dev
+    ```
+
+
