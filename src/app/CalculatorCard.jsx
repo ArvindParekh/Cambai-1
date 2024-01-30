@@ -29,11 +29,11 @@ const CalculatorCard = () => {
   }
 
   return (
-    <aside className="border bg-white rounded-xl shadow-2xl p-5">
+    <aside className="border border-1 bg-white rounded-xl shadow-2xl p-5">
       <div className="flex flex-col items-center gap-5">
         <h1 className="text-6xl font-bold">Calculator</h1>
         <input
-          className="p-2 border text-xl font-medium rounded-lg"
+          className="p-2 border-2 border-black text-xl font-medium rounded-lg"
           value={inputValue}
           readOnly
         />
