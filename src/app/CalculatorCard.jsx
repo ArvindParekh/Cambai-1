@@ -2,8 +2,6 @@ import { useState } from "react";
 
 const CalculatorCard = () => {
   const [inputValue, setInputValue] = useState(undefined);
-  const [first, setFirst] = useState();
-  const [second, setSecond] = useState();
 
   function handleClick(event) {
     const value = event.target.getAttribute("data-value");
@@ -19,7 +17,15 @@ const CalculatorCard = () => {
   }
 
   function handleSubmit(){
-    console.log(eval(inputValue), inputValue);
+    if(inputValue === undefined){
+        alert("Covered the edge cases, lol");
+    }
+    const result = eval(inputValue);
+    setInputValue(result);
+  }
+
+  function handleClear(){
+    setInputValue("");
   }
 
   return (
@@ -145,6 +151,7 @@ const CalculatorCard = () => {
             +
           </button>
         </div>
+        <button className="border border-1 w-full p-3 rounded-lg" onClick={handleClear}>Clear</button>
       </div>
     </aside>
   );
