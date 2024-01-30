@@ -2,6 +2,24 @@ import { useState } from "react";
 
 const CalculatorCard = () => {
   const [inputValue, setInputValue] = useState(undefined);
+  const buttonArr = [
+    1,
+    2,
+    3,
+    "/",
+    4,
+    5,
+    6,
+    "*",
+    7,
+    8,
+    9,
+    "+",
+    0,
+    ".",
+    "-",
+    "=",
+  ];
 
   function handleClick(event) {
     const value = event.target.getAttribute("data-value");
@@ -16,15 +34,15 @@ const CalculatorCard = () => {
     }
   }
 
-  function handleSubmit(){
-    if(inputValue === undefined){
-        alert("Covered the edge cases, lol");
+  function handleSubmit() {
+    if (inputValue === undefined) {
+      alert("Covered the edge cases, lol");
     }
     const result = eval(inputValue);
     setInputValue(result);
   }
 
-  function handleClear(){
+  function handleClear() {
     setInputValue("");
   }
 
@@ -38,6 +56,20 @@ const CalculatorCard = () => {
           readOnly
         />
         <div className="grid grid-rows-4 grid-cols-4 gap-4 w-full text-center">
+          {buttonArr.map((value, index) => {
+            return (
+              <button
+                key={index}
+                className="border p-4 rounded-lg border-1"
+                onClick={handleClick}
+                data-value={value}
+              >
+                {value}
+              </button>
+            );
+          })}
+        </div>
+        {/* <div className="grid grid-rows-4 grid-cols-4 gap-4 w-full text-center">
           <button
             className="border p-4 rounded-lg border-1"
             data-value={1}
@@ -150,8 +182,13 @@ const CalculatorCard = () => {
           >
             +
           </button>
-        </div>
-        <button className="border border-1 w-full p-3 rounded-lg" onClick={handleClear}>Clear</button>
+        </div> */}
+        <button
+          className="border border-1 w-full p-3 rounded-lg"
+          onClick={handleClear}
+        >
+          Clear
+        </button>
       </div>
     </aside>
   );
