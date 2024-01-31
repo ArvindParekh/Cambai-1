@@ -62,9 +62,9 @@ const CalculatorCard = () => {
   return (
     <aside className="border border-1 bg-white rounded-xl shadow-2xl p-5">
       <div className="flex flex-col items-center gap-5">
-        <h1 className="text-6xl font-bold">Calculator</h1>
+        <h1 className="text-6xl font-bold max-[300px]:text-4xl">Calculator</h1>
         <input
-          className="p-2 border-2 border-black text-xl font-medium rounded-lg"
+          className="p-2 border-2 border-black text-xl font-medium rounded-lg max-[300px]:w-[90%]"
           value={inputValue}
           readOnly
         />
@@ -73,7 +73,7 @@ const CalculatorCard = () => {
             return (
               <button
                 key={index}
-                className="border p-4 rounded-lg border-1 hover:bg-gray-100 transition-all"
+                className="border p-4 text-2xl rounded-lg border-1 hover:bg-gray-100 transition-all"
                 onClick={handleClick}
                 data-value={value}
               >
